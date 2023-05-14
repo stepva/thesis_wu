@@ -1,0 +1,12 @@
+*.pdf
+.DS_Store
+venv
+__pycache__
+
+reports
+news
+tickers.json
+reports_overview.xlsx
+
+notes.txt
+todo.txt
