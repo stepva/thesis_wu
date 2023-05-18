@@ -19,7 +19,7 @@ t = time.time()
 news_folder = Path('news') / 'original'
 txt_folder = Path('news') / 'txt'
 news_stats = Path('news') / "news_stats.json"
-tickers_path = Path('tickers.json')
+tickers_path = Path('data_processing', 'tickers.json')
 
 if os.path.exists(news_stats):
     with open(news_stats, "r") as json_file:
