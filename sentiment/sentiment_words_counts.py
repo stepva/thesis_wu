@@ -1,5 +1,6 @@
 """
 This script counts occurences of positive and negative words in the processed relevant ESG sentences.
+Sentences longer than 100 words are removed - this can be played with, see comments in sentiment_processing_check.py.
 The results are saved in the report_stats.json file.
 The actual words and their counts are also saved, in the report_sentiment_words.json file.
 """
@@ -55,6 +56,9 @@ for i, company in enumerate(companies):
 
         with open(sentiment_ready / company / report, "r") as text_file:
             sentences = text_file.read().splitlines()
+
+        # remove sentences longer than 100 words
+        sentences = [s for s in sentences if len(s.split()) <= 100]
 
         all_words = [word for s in sentences for word in s.split()]
 
