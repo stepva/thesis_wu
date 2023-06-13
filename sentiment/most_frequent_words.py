@@ -1,5 +1,5 @@
 """
-This script provides most frequent positive and negative words in the processed relevant ESG sentences.
+This script provides most frequent positive and negative words in the sentimented NEWS or REPORTS.
 """
 
 from pathlib import Path
@@ -7,16 +7,25 @@ import time
 import json
 from collections import defaultdict
 
+REPORTS = False
+NEWS = True
+assert not (REPORTS and NEWS)
+
 t = time.time()
 
-report_sentiment_words_path = Path("reports") / "report_sentiment_words.json"
+if REPORTS:
+    sentiment_words_path = Path("reports") / "report_sentiment_words.json"
+    print("ANALYZING REPORTS")
+else:
+    sentiment_words_path = Path("news") / "news_sentiment_words.json"
+    print("ANALYZING NEWS")
 
-with open(report_sentiment_words_path, "r") as json_file:
-    report_sentiment_words = json.load(json_file)
+with open(sentiment_words_path, "r") as json_file:
+    sentiment_words = json.load(json_file)
 
 all_positives = defaultdict(int)
 all_negatives = defaultdict(int)
-for comp, reports in report_sentiment_words.items():
+for comp, reports in sentiment_words.items():
     for rep, words in reports.items():
         for k, v in words["positive_words"].items():
             all_positives[k] += v

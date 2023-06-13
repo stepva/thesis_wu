@@ -1,5 +1,5 @@
 """
-This script provides descriptive statistics on the counts of positive and negative words in the processed relevant ESG sentences.
+This script provides descriptive statistics on the counts of positive and negative words in the processed REPORTS or NEWS.
 It also calculates the first sentiment polarity index.
 """
 
@@ -9,23 +9,35 @@ import numpy as np
 import pandas as pd
 import json
 
+REPORTS = False
+NEWS = True
+assert not (REPORTS and NEWS)
+
 t = time.time()
 
-report_stats_path = Path("reports") / "report_stats.json"
+if REPORTS:
+    stats_path = Path("reports") / "report_stats.json"
+    print("ANALYZING REPORTS")
+else:
+    stats_path = Path("news") / "news_stats.json"
+    print("ANALYZING NEWS")
 
-with open(report_stats_path, "r") as json_file:
-    report_stats = json.load(json_file)
+with open(stats_path, "r") as json_file:
+    stats = json.load(json_file)
 
-n_positives = np.array([c[r]["n_positive_words"] for c in report_stats.values() for r in c.keys()])
+print("Positive words - descriptive stats:")
+n_positives = np.array([c[r]["n_positive_words"] for c in stats.values() for r in c.keys()])
 print(pd.DataFrame(n_positives, columns=["lengths"]).describe())
 
-n_negatives = np.array([c[r]["n_negative_words"] for c in report_stats.values() for r in c.keys()])
+print("Negative words - descriptive stats:")
+n_negatives = np.array([c[r]["n_negative_words"] for c in stats.values() for r in c.keys()])
 print(pd.DataFrame(n_negatives, columns=["lengths"]).describe())
 
+print("Sentiment polarity - descriptive stats:")
 sentiment_polarity = np.array(
     [
         (c[r]["n_positive_words"] - c[r]["n_negative_words"]) / (c[r]["n_positive_words"] + c[r]["n_negative_words"])
-        for c in report_stats.values()
+        for c in stats.values()
         for r in c.keys()
     ]
 )
