@@ -13,14 +13,14 @@ import regex
 
 import pypandoc
 
-from utils import list_files
+from common.utils import list_files
 
 t = time.time()
 
 news_folder = Path("news") / "original"
 txt_folder = Path("news") / "txt"
 news_stats = Path("news") / "news_stats.json"
-tickers_path = Path("data_processing", "tickers.json")
+tickers_path = Path("common", "tickers.json")
 
 if os.path.exists(news_stats):
     with open(news_stats, "r") as json_file:

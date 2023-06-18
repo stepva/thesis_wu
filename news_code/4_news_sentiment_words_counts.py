@@ -11,7 +11,7 @@ import os
 import json
 from collections import Counter
 
-from data_processing.utils import list_folders, list_files
+from common.utils import list_folders, list_files
 
 t = time.time()
 

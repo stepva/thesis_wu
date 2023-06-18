@@ -12,7 +12,7 @@ import regex
 import os
 import json
 
-from data_processing.utils import list_folders, list_files
+from common.utils import list_folders, list_files
 
 t = time.time()
 

@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from data_processing.utils import list_folders, list_files
+from common.utils import list_folders, list_files
 
 sentiment_ready = Path("reports") / "sentiment_ready"
 

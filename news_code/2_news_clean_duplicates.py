@@ -8,13 +8,13 @@ import time
 import json
 import regex
 
-from utils import list_files, list_folders
+from common.utils import list_files, list_folders
 
 t = time.time()
 
 txt_folder = Path("news") / "txt"
 news_stats = Path("news") / "news_stats.json"
-tickers_path = Path("data_processing", "tickers.json")
+tickers_path = Path("common", "tickers.json")
 
 with open(news_stats, "r") as json_file:
     news_stats = json.load(json_file)
