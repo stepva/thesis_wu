@@ -31,6 +31,9 @@ companies = list_folders(pdf_folder)
 # companies = [companies[0]]
 n_companies = len(companies)
 
+if not os.path.exists(txt_folder):
+    os.mkdir(txt_folder)
+
 for i, company in enumerate(companies):
     if not os.path.exists(txt_folder / company):
         os.mkdir(txt_folder / company)

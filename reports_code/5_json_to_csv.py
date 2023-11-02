@@ -19,12 +19,19 @@ for company, comp_dict in report_stats.items():
     del comp_results["time_taken"]
     comp_results[["year", "additional_info"]] = comp_results["report"].str.extract(r"(\d{4})_?(\w+)?")
 
-    def calc_sentiment_polarity(row):
-        return (row["n_positive_words"] - row["n_negative_words"]) / (row["n_positive_words"] + row["n_negative_words"])
+    def calc_sentiment_polarity(row, sub=None):
+        subsub = f"_{sub}" if sub else ""
+        return (row[f"n_positive_words{subsub}"] - row[f"n_negative_words{subsub}"]) / (
+            row[f"n_positive_words{subsub}"] + row[f"n_negative_words{subsub}"]
+        )
 
     comp_results["sentiment_polarity"] = comp_results.apply(calc_sentiment_polarity, axis=1)
+    comp_results["sentiment_polarity_env"] = comp_results.apply(calc_sentiment_polarity, axis=1, sub="env")
+    comp_results["sentiment_polarity_soc"] = comp_results.apply(calc_sentiment_polarity, axis=1, sub="soc")
+    comp_results["sentiment_polarity_gov"] = comp_results.apply(calc_sentiment_polarity, axis=1, sub="gov")
 
     report_results = pd.concat([report_results, comp_results])
+
 
 first_cols = ["company", "report", "year", "additional_info"]
 report_results = report_results[first_cols + [c for c in report_results.columns if c not in first_cols]]
@@ -32,6 +39,6 @@ report_results = report_results[first_cols + [c for c in report_results.columns 
 report_results["year"] = report_results["year"].astype(int)
 report_results.sort_values(by=["company", "year"], inplace=True)
 
-report_results = report_results.loc[report_results["year"] != 2022]
+# report_results = report_results.loc[report_results["year"] != 2022]
 
 report_results.to_csv(Path("reports") / "reports_results.csv", index=False)

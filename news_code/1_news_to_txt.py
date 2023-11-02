@@ -33,6 +33,9 @@ with open(tickers_path, "r") as json_file:
 
 n_companies = len(tickers.keys())
 
+if not os.path.exists(txt_folder):
+    os.mkdir(txt_folder)
+
 # tickers = {'ABI_BR': 'ABI'}
 for i, (company, news_ticker) in enumerate(tickers.items()):
     if not os.path.exists(txt_folder / company):

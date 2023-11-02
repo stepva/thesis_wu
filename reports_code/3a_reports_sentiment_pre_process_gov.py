@@ -14,8 +14,8 @@ from common.utils import list_folders, list_files
 
 t = time.time()
 
-esg_folder = Path("reports") / "esg_relevant"
-sentiment_ready = Path("reports") / "sentiment_ready"
+esg_folder = Path("reports") / "esg_relevant_gov"
+sentiment_ready = Path("reports") / "sentiment_ready_gov"
 
 companies = list_folders(esg_folder)
 # company = companies[0]

@@ -19,12 +19,12 @@ t = time.time()
 # load ESG word list
 # there are 2 words with 2 words in the list (climate change, global warming)
 # both "climate" and "warming" are included independentyl as well, so can ignore these
-with open(Path("esg_words", "baier.txt"), "r") as text_file:
+with open(Path("esg_words", "baier_gov.txt"), "r") as text_file:
     esg_words = text_file.readlines()
     esg_words = [w.rstrip().lower() for w in esg_words]
 
 txt_folder = Path("news") / "txt"
-sentiment_ready = Path("news") / "sentiment_ready"
+sentiment_ready = Path("news") / "sentiment_ready_gov"
 news_stats = Path("news") / "news_stats.json"
 
 with open(news_stats, "r") as json_file:
@@ -56,7 +56,6 @@ for i, company in enumerate(companies):
             articles = text_file.read().splitlines()
 
         processed_articles = []
-        n_sentences_total = 0
         n_esg_sentences_total = 0
         for article in articles:
             if len(article.split()) < 5:
@@ -71,7 +70,6 @@ for i, company in enumerate(companies):
             # tokenize sentences into words (numbers and weird signs still included)
             sentences = [nltk.tokenize.word_tokenize(s) for s in sentences]
             n_sentences = len(sentences)
-            n_sentences_total += n_sentences
 
             # indexes of sentences with ESG words
             esg_sentences_id = set([i for i, s in enumerate(sentences) if any(w in s for w in esg_words)])
@@ -100,9 +98,9 @@ for i, company in enumerate(companies):
 
             processed_articles.append(" ".join([date] + article))
 
-        news_stats[company][year]["n_articles_processed"] = len(processed_articles)
-        news_stats[company][year]["n_sentences"] = n_sentences_total
-        news_stats[company][year]["n_esg_sentences"] = n_esg_sentences_total
+        # news_stats[company][year]["n_articles_processed"] = len(processed_articles)
+        # news_stats[company][year]["n_sentences"] = n_sentences
+        news_stats[company][year]["n_esg_sentences_gov"] = n_esg_sentences_total
         processed_articles = "\n".join(processed_articles) + "\n"
 
         with open(sentiment_ready / company / f"{company}_{year}.txt", "w") as text_file:

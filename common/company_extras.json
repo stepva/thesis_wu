@@ -1,0 +1,357 @@
+{
+  "LVMH_PA": {
+    "sector": "Consumer Cyclical",
+    "industry": "Luxury Goods",
+    "esg": 12,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "ASML_AS": {
+    "sector": "Technology",
+    "industry": "Semiconductor Equipment & Materials",
+    "esg": 11,
+    "country": "Netherlands",
+    "exchange": "Amsterdam"
+  },
+  "OREP_PA": {
+    "sector": "Consumer Defensive",
+    "industry": "Household & Personal Products",
+    "esg": 17,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "HRMS_PA": {
+    "sector": "Consumer Cyclical",
+    "industry": "Luxury Goods",
+    "esg": 10,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "TTEF_PA": {
+    "sector": "Energy",
+    "industry": "Oil & Gas Integrated",
+    "esg": 30,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "LINI_DE": {
+    "sector": "Basic Materials",
+    "industry": "Specialty Chemicals",
+    "esg": "",
+    "country": "United Kingdom",
+    "exchange": "XETRA"
+  },
+  "PRX_AS": {
+    "sector": "Communication Services",
+    "industry": "Internet Content & Information",
+    "esg": "",
+    "country": "Netherlands",
+    "exchange": "Amsterdam",
+    "fiscal_year": [4, 3]
+  },
+  "SAPG_DE": {
+    "sector": "Technology",
+    "industry": "Software—Application",
+    "esg": 11,
+    "country": "Germany",
+    "exchange": "XETRA"
+  },
+  "SIEGn_DE": {
+    "sector": "Industrials",
+    "industry": "Specialty Industrial Machinery",
+    "esg": 30,
+    "country": "Germany",
+    "exchange": "XETRA",
+    "fiscal_year": [10, 9]
+  },
+  "SASY_PA": {
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers—General",
+    "esg": 22,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "DTEGn_DE": {
+    "sector": "Communication Services",
+    "industry": "Telecom Services",
+    "esg": 16,
+    "country": "Germany",
+    "exchange": "XETRA"
+  },
+  "ABI_BR": {
+    "sector": "Consumer Defensive",
+    "industry": "Beverages—Brewers",
+    "esg": 21,
+    "country": "Belgium",
+    "exchange": "Brussels"
+  },
+  "AIR_PA": {
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "esg": 27,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "ALVG_DE": {
+    "sector": "Financial Services",
+    "industry": "Insurance—Diversified",
+    "esg": 17,
+    "country": "Germany",
+    "exchange": "XETRA"
+  },
+  "ITX_MC": {
+    "sector": "Consumer Cyclical",
+    "industry": "Apparel Retail",
+    "esg": 13,
+    "country": "Spain",
+    "exchange": "MCE",
+    "fiscal_year": [2, 1]
+  },
+  "SCHN_PA": {
+    "sector": "Industrials",
+    "industry": "Specialty Industrial Machinery",
+    "esg": 17,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "BNPP_PA": {
+    "sector": "Financial Services",
+    "industry": "Banks—Regional",
+    "esg": 25,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "MBGn_DE": {
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "esg": 23,
+    "country": "Germany",
+    "exchange": "XETRA"
+  },
+  "ESLX_PA": {
+    "sector": "Healthcare",
+    "industry": "Medical Instruments & Supplies",
+    "esg": 20,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "VOWG_DE": {
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "esg": "",
+    "country": "Germany",
+    "exchange": "XETRA"
+  },
+  "AIRP_PA": {
+    "sector": "Basic Materials",
+    "industry": "Specialty Chemicals",
+    "esg": 14,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "PRTP_PA": {
+    "sector": "Consumer Cyclical",
+    "industry": "Luxury Goods",
+    "esg": 11,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "IBE_MC": {
+    "sector": "Utilities",
+    "industry": "Utilities—Diversified",
+    "esg": 20,
+    "country": "Spain",
+    "exchange": "MCE"
+  },
+  "AXAF_PA": {
+    "sector": "Financial Services",
+    "industry": "Insurance—Diversified",
+    "esg": 17,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "BMWG_DE": {
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "esg": 23,
+    "country": "Germany",
+    "exchange": "XETRA"
+  },
+  "SGEF_PA": {
+    "sector": "Industrials",
+    "industry": "Engineering & Construction",
+    "esg": 27,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "SAN_MC": {
+    "sector": "Financial Services",
+    "industry": "Banks—Diversified",
+    "esg": 24,
+    "country": "Spain",
+    "exchange": "MCE"
+  },
+  "BAYGn_DE": {
+    "sector": "Healthcare",
+    "industry": "Drug Manufacturers—General",
+    "esg": 30,
+    "country": "Germany",
+    "exchange": "XETRA"
+  },
+  "SAF_PA": {
+    "sector": "Industrials",
+    "industry": "Aerospace & Defense",
+    "esg": 23,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "ENEI_MI": {
+    "sector": "Utilities",
+    "industry": "Utilities—Diversified",
+    "esg": 23,
+    "country": "Italy",
+    "exchange": "Milan"
+  },
+  "ENI_MI": {
+    "sector": "Energy",
+    "industry": "Oil & Gas Integrated",
+    "esg": 27,
+    "country": "Italy",
+    "exchange": "Milan"
+  },
+  "DPWGn_DE": {
+    "sector": "Industrials",
+    "industry": "Integrated Freight & Logistics",
+    "esg": 15,
+    "country": "Germany",
+    "exchange": "XETRA"
+  },
+  "STLAM_MI": {
+    "sector": "Consumer Cyclical",
+    "industry": "Auto Manufacturers",
+    "esg": "",
+    "country": "Italy",
+    "exchange": "Milan"
+  },
+  "INGA_AS": {
+    "sector": "Financial Services",
+    "industry": "Banks—Diversified",
+    "esg": 22,
+    "country": "Netherlands",
+    "exchange": "Amsterdam"
+  },
+  "PERP_PA": {
+    "sector": "Consumer Defensive",
+    "industry": "Beverages-Wineries & Distilleries",
+    "esg": 15,
+    "country": "France",
+    "exchange": "Paris",
+    "fiscal_year": [7, 6]
+  },
+  "ISP_MI": {
+    "sector": "Financial Services",
+    "industry": "Banks—Regional",
+    "esg": 16,
+    "country": "Italy",
+    "exchange": "Milan"
+  },
+  "IFXGn_DE": {
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "esg": 18,
+    "country": "Germany",
+    "exchange": "XETRA",
+    "fiscal_year": [10, 9]
+  },
+  "BASFn_DE": {
+    "sector": "Basic Materials",
+    "industry": "Chemicals",
+    "esg": 28,
+    "country": "Germany",
+    "exchange": "XETRA"
+  },
+  "MUVGn_DE": {
+    "sector": "Financial Services",
+    "industry": "Insurance-Reinsurance",
+    "esg": 18,
+    "country": "Germany",
+    "exchange": "XETRA"
+  },
+  "ADYEN_AS": {
+    "sector": "Technology",
+    "industry": "Software—Infrastructure",
+    "esg": "",
+    "country": "Netherlands",
+    "exchange": "Amsterdam"
+  },
+  "BBVA_MC": {
+    "sector": "Financial Services",
+    "industry": "Banks—Diversified",
+    "esg": 22,
+    "country": "Spain",
+    "exchange": "MCE"
+  },
+  "NDAFI_HE": {
+    "sector": "Financial Services",
+    "industry": "Banks—Regional",
+    "esg": "",
+    "country": "Finland",
+    "exchange": "Helsinki"
+  },
+  "DANO_PA": {
+    "sector": "Consumer Defensive",
+    "industry": "Packaged Foods",
+    "esg": 20,
+    "country": "France",
+    "exchange": "Paris"
+  },
+  "DB1Gn_DE": {
+    "sector": "Financial Services",
+    "industry": "Financial Data & Stock Exchanges",
+    "esg": 12,
+    "country": "Germany",
+    "exchange": "XETRA"
+  },
+  "CRH_I": {
+    "sector": "Basic Materials",
+    "industry": "Building Materials",
+    "esg": 19,
+    "country": "Ireland",
+    "exchange": "Irish"
+  },
+  "AD_AS": {
+    "sector": "Consumer Defensive",
+    "industry": "Grocery Stores",
+    "esg": 21,
+    "country": "Netherlands",
+    "exchange": "Amsterdam"
+  },
+  "ADSGn_DE": {
+    "sector": "Consumer Cyclical",
+    "industry": "Footwear & Accessories",
+    "esg": 13,
+    "country": "Germany",
+    "exchange": "XETRA"
+  },
+  "FLTRF_I": {
+    "sector": "Consumer Cyclical",
+    "industry": "Gambling",
+    "esg": 25,
+    "country": "Ireland",
+    "exchange": "Irish"
+  },
+  "NOKIA_HE": {
+    "sector": "Technology",
+    "industry": "Communication Equipment",
+    "esg": 13,
+    "country": "Finland",
+    "exchange": "Helsinki"
+  },
+  "VNAn_DE": {
+    "sector": "Real Estate",
+    "industry": "Real Estate Services",
+    "esg": 7,
+    "country": "Germany",
+    "exchange": "XETRA"
+  }
+}

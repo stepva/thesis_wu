@@ -24,7 +24,18 @@ for company, comp_dict in news_stats.items():
     def calc_sentiment_polarity(row):
         return (row["n_positive_words"] - row["n_negative_words"]) / (row["n_positive_words"] + row["n_negative_words"])
 
+    def calc_sentiment_polarity_fy(row):
+        if (row["n_negative_words_fy"] + row["n_positive_words_fy"]) > 0:
+            return (row["n_positive_words_fy"] - row["n_negative_words_fy"]) / (
+                row["n_positive_words_fy"] + row["n_negative_words_fy"]
+            )
+        else:
+            return None
+
     comp_results["sentiment_polarity"] = comp_results.apply(calc_sentiment_polarity, axis=1)
+
+    if "n_positive_words_fy" in comp_results.columns:
+        comp_results["sentiment_polarity_fy"] = comp_results.apply(calc_sentiment_polarity_fy, axis=1)
 
     news_results = pd.concat([news_results, comp_results])
 
@@ -34,6 +45,6 @@ news_results = news_results[first_cols + [c for c in news_results.columns if c n
 news_results["year"] = news_results["year"].astype(int)
 news_results.sort_values(by=["company", "year"], inplace=True)
 
-news_results = news_results.loc[news_results["year"] != 2022]
+# news_results = news_results.loc[news_results["year"] != 2022]
 
 news_results.to_csv(Path("news") / "news_results.csv", index=False)

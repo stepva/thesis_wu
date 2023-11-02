@@ -19,11 +19,11 @@ t = time.time()
 # load ESG word list
 # there are 2 words with 2 words in the list (climate change, global warming)
 # both "climate" and "warming" are included independentyl as well, so can ignore these
-with open(Path("esg_words", "baier.txt"), "r") as text_file:
+with open(Path("esg_words", "baier_env.txt"), "r") as text_file:
     esg_words = text_file.readlines()
     esg_words = [w.rstrip().lower() for w in esg_words]
 
-esg_folder = Path("reports") / "esg_relevant"
+esg_folder = Path("reports") / "esg_relevant_env"
 txt_folder = Path("reports") / "txt"
 report_stats_path = Path("reports") / "report_stats.json"
 
@@ -80,8 +80,8 @@ for i, company in enumerate(companies):
         with open(esg_folder / company / report, "w") as text_file:
             text_file.write("\n".join(esg_sentences))
 
-        report_stats[company][report_name]["n_sentences"] = n_sentences
-        report_stats[company][report_name]["n_esg_sentences"] = n_esg_sentences
+        # report_stats[company][report_name]["n_sentences"] = n_sentences
+        report_stats[company][report_name]["n_esg_sentences_env"] = n_esg_sentences
 
 with open(Path("reports") / "report_stats.json", "w") as json_file:
     json.dump(report_stats, json_file)

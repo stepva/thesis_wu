@@ -6,9 +6,11 @@ __pycache__
 
 reports
 news
-tickers.json
 reports_overview.xlsx
 baier.txt
+baier_env.txt
+baier_gov.txt
+baier_soc.txt
 
 Loughran-McDonald_MasterDictionary_1993-2021.csv
 positive.txt
